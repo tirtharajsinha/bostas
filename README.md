@@ -38,7 +38,11 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         You are all set to roll.</li>
     <li><b>Use this starter plate to active your bot </b> <br>Make sure you have an account on your terget site. 
     Cuz anonymously you can't enter on social media sites.<br></li>
-        ```
+        
+      
+</ol>
+    
+```
         from bostas import instabot # for instagram heist
         from selenium import webdriver
         # replace with the "PATH" in your local mechine of the installer file of newly downloaded  webdriver.
@@ -52,13 +56,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         # You can set more action using the in-built function like....
         # insta.LikeCommentByUsername(target="user",like=True,comment=True)
         # learn more on Documentation.
-        ```
-      
-</ol>
-    
-```
-         pip install bostos
-         ```    
+ ```
 
 
 
