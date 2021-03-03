@@ -30,10 +30,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         <br>Download python <a href="https://www.python.org/downloads/">Here</a>
         <br> It's better for you to use a Good IDE.(pycharm/vscode/jupyter notebook....etc.)</li>
    
-     <li>Now time to install Bostas.<br>
-
-         <br>
-         No need to install dependencies like selenium,beautifulsoup4 as bostos comes with it's own dependency.<br>
+     <li>Now time to install Bostas.<br>No need to install dependencies like selenium,beautifulsoup4 as bostos comes with it's own dependency.<br>
         You are all set to roll.</li>
     <li><b>Use this starter plate to active your bot </b> <br>Make sure you have an account on your terget site. 
     Cuz anonymously you can't enter on social media sites.<br></li>
