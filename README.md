@@ -29,9 +29,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
     <li>Make sure you have downloaded python3 in your Mechine.
         <br>Download python <a href="https://www.python.org/downloads/">Here</a>
         <br> It's better for you to use a Good IDE.(pycharm/vscode/jupyter notebook....etc.)</li>
-    ```
-         pip install bostos
-```
+   
      <li>Now time to install Bostas.<br>
 
          <br>
