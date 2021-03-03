@@ -1,4 +1,4 @@
-<img src="Downloads/bostas.png">
+<img src="https://github.com/tirtharajsinha/bostas/blob/main/static/bostas.png">
 
 # bostas==0.0.1
 
@@ -21,7 +21,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         <li><a href="https://chromedriver.chromium.org/downloads">#ChromeDriver</a></li>
           <li><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">#Microsoft Edge</a></li> 
           <li><a href="https://github.com/mozilla/geckodriver/releases">#Mozilla Firefox</a>  --> you will get a page like this .          click the link as per your OS and version.
-          <img src="Downloads/firefox.png"></li>
+          <img src="https://github.com/tirtharajsinha/bostas/blob/main/static/firefox.png"></li>
           <li><a href="https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari">#Safari</a></li>
           <li>Read Full Documentation <a href="https://www.selenium.dev/downloads/">Here</a></li>
         </ul>
