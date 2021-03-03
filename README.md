@@ -37,7 +37,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
          No need to install dependencies like selenium,beautifulsoup4 as bostos comes with it's own dependency.<br>
         You are all set to roll.</li>
     <li><b>Use this starter plate to active your bot </b> <br>Make sure you have an account on your terget site. 
-    Cuz anonymously you can't enter on social media sites.<br>
+    Cuz anonymously you can't enter on social media sites.<br></li>
         ```
         from bostas import instabot # for instagram heist
         from selenium import webdriver
@@ -53,7 +53,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         # insta.LikeCommentByUsername(target="user",like=True,comment=True)
         # learn more on Documentation.
         ```
-      </li>
+      
 </ol>
     
 ```
