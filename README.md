@@ -54,5 +54,5 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         # learn more on Documentation.
  ```
 
-
+Now you are set to play with it.
 
