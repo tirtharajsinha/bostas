@@ -6,4 +6,8 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
 
 <br>Read Full official documentation <a href="#">Here</a> .
 
-
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
