@@ -21,9 +21,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
           <li><a href="https://github.com/mozilla/geckodriver/releases">#Mozilla Firefox</a>  --> you will get a page like this .          click the link as per your OS and version.
           </li>
           <li><a href="https://developer.apple.com/documentation/webkit/testing_with_webdriver_in_safari">#Safari</a></li>
-          <li>Read Full Documentation <a href="https://www.selenium.dev/downloads/">Here</a></li>
-        
-       </ul>
+          <li>Read Full Documentation <a href="https://www.selenium.dev/downloads/">Here</a></li><ul>
     </li>
     <li>Make sure you have downloaded python3 in your Mechine.
         <br>Download python <a href="https://www.python.org/downloads/">Here</a>
