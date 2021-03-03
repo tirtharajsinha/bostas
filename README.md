@@ -56,7 +56,9 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
       </li>
 </ol>
     
-    
+```
+         pip install bostos
+         ```    
 
 
 
