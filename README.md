@@ -30,7 +30,10 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         <br>Download python <a href="https://www.python.org/downloads/">Here</a>
         <br> It's better for you to use a Good IDE.(pycharm/vscode/jupyter notebook....etc.)</li>
      <li>Now time to install Bostas.<br>
-         ```pip install bostos```<br>
+         ```
+         pip install bostos
+         ```
+         <br>
          No need to install dependencies like selenium,beautifulsoup4 as bostos comes with it's own dependency.<br>
         You are all set to roll.</li>
     <li><b>Use this starter plate to active your bot </b> <br>Make sure you have an account on your terget site. 
@@ -48,7 +51,8 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         # this will take you to home page of your account.
         # You can set more action using the in-built function like....
         # insta.LikeCommentByUsername(target="user",like=True,comment=True)
-        # learn more on Documentation.```
+        # learn more on Documentation.
+        ```
       </li>
 </ol>
     
