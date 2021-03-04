@@ -1,4 +1,4 @@
-<img src="https://github.com/tirtharajsinha/bostas/blob/main/static/bostas.png">
+<img src="https://github.com/tirtharajsinha/bostas/blob/main/static/bostas.png" style="margin:auto;">
 
 # bostas==0.0.1
 
