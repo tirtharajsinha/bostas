@@ -26,7 +26,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
         <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/#features">Bostos features documentation</a></li>
         <li><a href="https://tirtharajsinha.github.io/bostos/docu/">Full Documentation</a></li>
         </ul></li>
-    <li><a href="#">Discussion with Community</a></li>
+    <li><a href="https://github.com/tirtharajsinha/bostas/discussions/1">Discussion with Community</a></li>
     <li><a href="https://tirtharajsinha.github.io/bostos/docu/">Official site</a></li>
     <li><a href="https://github.com/tirtharajsinha/bostos/">github resourses</a></li>
     <li><a href="https://tirtharajsinha.github.io/bostos/docu/index.html/#cradits">Cradits</a></li>
