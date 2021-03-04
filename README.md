@@ -14,29 +14,29 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
 
 <ul>
     <li><ul>
-        <a href="">How to install and run bostos</a>
-        <li><a href="#">install bostos</a></li>
-        <li><a href="#">Download webdriver</a></li>
-        <li><a href="#">run bostos</a></li>
-        <li><a href="#">update bostos</a></li>
+        <a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/">How to install and run bostos</a>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/#install">install bostos</a></li>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/#webdriver">Download webdriver</a></li>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/#run">run bostos</a></li>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/#update">update bostos</a></li>
         </ul></li>
     <li><ul>
         <a href="">Guide and Documentation</a>
-        <li><a href="#">Written guide</a></li>
-        <li><a href="#">Bostos features documentation</a></li>
-        <li><a href="#">Full Documentation</a></li>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html">Written guide</a></li>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/#features">Bostos features documentation</a></li>
+        <li><a href="https://tirtharajsinha.github.io/bostos/docu/">Full Documentation</a></li>
         </ul></li>
     <li><a href="#">Discussion with Community</a></li>
-    <li><a href="#">Official site</a></li>
-    <li><a href="#">github resourses</a></li>
-    <li><a href="#">Cradits</a></li>
-    <li><a href="#">Supports</a></li>
+    <li><a href="https://tirtharajsinha.github.io/bostos/docu/">Official site</a></li>
+    <li><a href="https://github.com/tirtharajsinha/bostos/">github resourses</a></li>
+    <li><a href="https://tirtharajsinha.github.io/bostos/docu/index.html/#cradits">Cradits</a></li>
+    <li><a href="https://tirtharajsinha.github.io/bostos/docu/index.html/#support">Supports</a></li>
     </ul>
 
 
 
 ### Installation And Usage(short)
-for descripted documentation view <a href="#">here.</a>
+for descripted documentation view <a href="https://tirtharajsinha.github.io/bostos/docu/guide.html/">here.</a>
 <br>
 
 <ol>
