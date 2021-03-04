@@ -10,7 +10,33 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
 :green_book: <b>Read Full official documentation <a href="#">Here</a></b> .
 <hr>
 
-### Installation And Usage
+### importent links
+
+<ul>
+    <li><ul>
+        <a href="">How to install and run bostos</a>
+        <li><a href="#">install bostos</a></li>
+        <li><a href="#">Download webdriver</a></li>
+        <li><a href="#">run bostos</a></li>
+        <li><a href="#">update bostos</a></li>
+        </ul></li>
+    <li><ul>
+        <a href="">Guide and Documentation</a>
+        <li><a href="#">Written guide</a></li>
+        <li><a href="#">Bostos features documentation</a></li>
+        <li><a href="#">Full Documentation</a></li>
+        </ul></li>
+    <li><a href="#">Discussion with Community</a></li>
+    <li><a href="#">Official site</a></li>
+    <li><a href="#">github resourses</a></li>
+    <li><a href="#">Cradits</a></li>
+    <li><a href="#">Supports</a></li>
+    </ul>
+
+
+
+### Installation And Usage(short)
+for descripted documentation view <a href="#">here.</a>
 <br>
 
 <ol>
@@ -59,4 +85,7 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
  ```
 
 Now you are set to play with it.
+<br><br>
+### Disclaimer:
+Please be aware of that <b><i>bostos</i></b> is a under research period. Maintainer is not responsible for any illigal or violent<br> usage of this tool. Use it on your responsibility. Maintainer will not responsible if your account get banned or on any legal<br> action due to extensive use of this tool.
 
