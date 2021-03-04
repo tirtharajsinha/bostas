@@ -42,13 +42,16 @@ Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a hre
 ```
         from bostas import instabot # for instagram heist
         from selenium import webdriver
+        
         # replace with the "PATH" in your local mechine of the installer file of newly downloaded  webdriver.
         # like "C:/Users/USER/Downloads/edgedriver_win32/msedgedriver.exe" // for edge driver.
         # get more help on google.
+        
         driver = webdriver.Edge("PATH")
         insta = instabot.InstaBot(mydriver=driver)
         # login to instagram account
         insta.login("username", "passward")
+        
         # this will take you to home page of your account.
         # You can set more action using the in-built function like....
         # insta.LikeCommentByUsername(target="user",like=True,comment=True)
