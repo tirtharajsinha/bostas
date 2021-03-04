@@ -2,7 +2,7 @@
 
 # bostas==0.0.1
 
-A cool social media bot for automated surfing based on selenium module .
+A python package for automated web surfing based on selenium module .
 
 Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a href="https://pypi.org/project/bostas/0.0.1/" >Here </a>.
 
