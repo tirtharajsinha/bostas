@@ -73,15 +73,19 @@ for descripted documentation view <a href="https://tirtharajsinha.github.io/bost
         # like "C:/Users/USER/Downloads/edgedriver_win32/msedgedriver.exe" // for edge driver.
         # get more help on google.
         
-        driver = webdriver.Edge("PATH")
-        insta = instabot.InstaBot(mydriver=driver)
+        insta = InstaBot()
+        insta.setup(mydriver=webdriver.Edge("C:/Users/TIRTHA/Downloads/edgedriver_win32/msedgedriver.exe"))
+        
         # login to instagram account
         insta.login("username", "passward")
         
         # this will take you to home page of your account.
         # You can set more action using the in-built function like....
         # insta.LikeCommentByUsername(target="user",like=True,comment=True)
-        # learn more on Documentation.
+        # insta.FollowFollowers()
+        # insta.unfollowfollower(["username1","username2",.....])
+        # learn more Features on Documentation.
+        
  ```
 
 Now you are set to play with it.
