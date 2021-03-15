@@ -73,7 +73,7 @@ for descripted documentation view <a href="https://tirtharajsinha.github.io/bost
         # like "C:/Users/USER/Downloads/edgedriver_win32/msedgedriver.exe" // for edge driver.
         # get more help on google.
         
-        insta = InstaBot()
+        insta = instabot.InstaBot()
         insta.setup(mydriver=webdriver.Edge("C:/Users/TIRTHA/Downloads/edgedriver_win32/msedgedriver.exe"))
         
         # login to instagram account
