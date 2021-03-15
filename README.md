@@ -1,10 +1,10 @@
 <img src="https://github.com/tirtharajsinha/bostas/blob/main/static/bostas.png" style="margin:auto;">
 
-# bostas==0.0.1
+# bostas==0.0.2
 
 A python package for automated web surfing based on selenium module .
 
-Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a href="https://pypi.org/project/bostas/0.0.1/" >Here </a>.
+Now released on <a href="https://pypi.org/"> pypi.prg </a>. Check out now <a href="https://pypi.org/project/bostas/0.0.2/" >Here </a>.
 
 <br>
 :green_book: <b>Read Full official documentation <a href="#">Here</a></b> .
