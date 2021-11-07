@@ -7,6 +7,9 @@ import random
 import json
 import requests
 
+# class lists
+
+
 
 class InstaBot:
 
@@ -14,11 +17,17 @@ class InstaBot:
 
         self.driver = ""
         self.user = ""
+        self.classes = {
+            "next": "l8mY4",
+            "like": "fr66n",
+            "follow": "_6VtSN",
+            "comment": "RxpZH"
+        }
 
-    def setup(self,mydriver):
-        self.driver=mydriver #webdriver.Edge("C:/Users/TIRTHA/Downloads/edgedriver_win32/msedgedriver.exe")
+    def setup(self, mydriver):
+        self.driver = mydriver  # webdriver.Edge("C:/Users/TIRTHA/Downloads/edgedriver_win32/msedgedriver.exe")
 
-    def login(self,username,passward):
+    def login(self, username, passward):
 
         self.user = username
         self.driver.get('https://instagram.com/')
@@ -31,10 +40,10 @@ class InstaBot:
         sleep(1)
         self.driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button').click()
         sleep(2)
-        error=False
+        error = False
         try:
             self.driver.find_element_by_id("slfErrorAlert")
-            error=True
+            error = True
         except:
             sleep(2)
         if error:
@@ -46,9 +55,10 @@ class InstaBot:
         # self.driver.find_element_by_xpath("//button[contains(text(), 'Not Now')]").click()  # clicking 'not now btn'
         self.elemfinder(elemtype="xpath", elem="//button[contains(text(), 'Not Now')]").click()
         sleep(2)
+
     def elemfinder(self, elemtype, elem):
 
-        eliment=0
+        eliment = 0
         if elemtype == "xpath":
             # print("got xpath")
             while (True):
@@ -58,9 +68,9 @@ class InstaBot:
                 except selenium.common.exceptions.NoSuchElementException:
                     sleep(1)
             return eliment
-        elif elemtype=="classname":
+        elif elemtype == "classname":
             # print("got classname")
-            while(True):
+            while (True):
                 try:
                     eliment = self.driver.find_element_by_class_name(elem)
                     break
@@ -69,28 +79,28 @@ class InstaBot:
 
             return eliment
 
-    def commentpicker(self,comments=[],action=""):
-        if len(comments)>0 and action =="rewrite":
+    def commentpicker(self, comments=[], action=""):
+        if len(comments) > 0 and action == "rewrite":
             f = open("comments.txt", "w")
             text = "\n".join(comments)
             f.write(text)
             f.close()
             return True
-        elif len(comments)>0 and action =="append":
+        elif len(comments) > 0 and action == "append":
             f = open("comments.txt", "a")
             text = "\n".join(comments)
-            text="\n"+text
+            text = "\n" + text
             f.write(text)
             f.close()
         f = open("comments.txt", "r")
         commentlist = f.readlines()
 
-        rnd = random.randint(0, len(commentlist)-1)
+        rnd = random.randint(0, len(commentlist) - 1)
         return commentlist[rnd]
 
     def like(self, post=0):
         if post == 0:
-            post = self.elemfinder(elemtype="classname", elem="fr66n")
+            post = self.elemfinder(elemtype="classname", elem=self.classes["like"])
         soup = bs(post.get_attribute('innerHTML'), 'html.parser')
         if soup.find('svg')['aria-label'] == 'Like':
             sleep(2)
@@ -99,18 +109,18 @@ class InstaBot:
     def comment(self, comment=0, comments=[]):
         if comment == 0:
             try:
-                comment = self.driver.find_element_by_class_name("RxpZH")
+                comment = self.driver.find_element_by_class_name(self.classes["comment"])
             except:
                 return False
         comment.click()
         sleep(2)
-        if len(comments)==0:
-            mycomment=self.commentpicker()
-        elif len(comments)==1:
-            mycomments=comments[0]
+        if len(comments) == 0:
+            mycomment = self.commentpicker()
+        elif len(comments) == 1:
+            mycomments = comments[0]
         else:
-            rnd = random.randint(0, len(comments)-1)
-            mycomment=comments[rnd]
+            rnd = random.randint(0, len(comments) - 1)
+            mycomment = comments[rnd]
         try:
             self.driver.find_element_by_xpath("//textarea[@placeholder='Add a comment…']").send_keys(mycomment)
             sleep(2)
@@ -122,7 +132,8 @@ class InstaBot:
     def LikeCommentByUsername(self, target, numofposts=10, like=True, comment=True):
         self.driver.get("https://www.instagram.com")
         sleep(2)
-        usersearch_input = self.elemfinder(elemtype="xpath",elem="/html/body/div[1]/section/nav/div[2]/div/div/div[2]/input")
+        usersearch_input = self.elemfinder(elemtype="xpath",
+                                           elem="/html/body/div[1]/section/nav/div[2]/div/div/div[2]/input")
         sleep(1)
         usersearch_input.send_keys(target)
         sleep(2)
@@ -141,7 +152,7 @@ class InstaBot:
 
         while (counter < numofposts):
             try:
-                next = self.driver.find_element_by_class_name("_65Bje")
+                next = self.driver.find_element_by_class_name(self.classes["next"])
             except selenium.common.exceptions.NoSuchElementException:
                 break
             next.click()
@@ -170,11 +181,11 @@ class InstaBot:
     def LikeCommentByHashtag(self, hashtag, numofposts=10, like=True, comment=True):
         sleep(2)
         search_input = self.elemfinder(elemtype="xpath",
-                                           elem="/html/body/div[1]/section/nav/div[2]/div/div/div[2]/input")
+                                       elem="/html/body/div[1]/section/nav/div[2]/div/div/div[2]/input")
         sleep(1)
         hashtag = hashtag.strip()
         if hashtag[0] != "#":
-            hashtag = "#"+hashtag
+            hashtag = "#" + hashtag
 
         search_input.send_keys(hashtag)
         sleep(3)
@@ -188,7 +199,8 @@ class InstaBot:
         if available == True:
             result.click()
             sleep(2)
-            self.elemfinder(elemtype="xpath", elem="/html/body/div[1]/section/main/article/div[1]/div/div/div[1]/div[1]/a").click()
+            self.elemfinder(elemtype="xpath",
+                            elem="/html/body/div[1]/section/main/article/div[1]/div/div/div[1]/div[1]/a").click()
             sleep(2)
             if like:
                 self.like()
@@ -198,7 +210,7 @@ class InstaBot:
             counter = 1
             while (counter < numofposts):
                 try:
-                    next = self.driver.find_element_by_class_name("_65Bje")
+                    next = self.driver.find_element_by_class_name(self.classes["next"])
                 except selenium.common.exceptions.NoSuchElementException:
                     break
                 next.click()
@@ -213,23 +225,26 @@ class InstaBot:
         else:
             return False
 
-
         sleep(5)
-    def LikeCommentSaved(self,numofposts=10, like=True, comment=True):
+
+    def LikeCommentSaved(self, numofposts=10, like=True, comment=True):
         sleep(2)
         self.elemfinder(elemtype="xpath", elem="/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[5]").click()
         sleep(2)
         self.elemfinder(elemtype="xpath", elem="//div[2]/div[2]/div[2]/a[2]").click()
         sleep(5)
         try:
-            self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/div[3]/div[2]/div/div/div/div[1]/a").click()
+            self.driver.find_element_by_xpath(
+                "/html/body/div[1]/section/main/div/div[3]/div[2]/div/div/div/div[1]/a").click()
 
-            self.elemfinder(elemtype="xpath", elem="/html/body/div[1]/section/main/div/div/div[2]/article/div[1]/div/div[1]/div[1]/a").click()
+            self.elemfinder(elemtype="xpath",
+                            elem="/html/body/div[1]/section/main/div/div/div[2]/article/div[1]/div/div[1]/div[1]/a").click()
 
         except selenium.common.exceptions.NoSuchElementException:
 
-            #self.elemfinder(elemtype="xpath", elem="/html/body/div[1]/section/main/div/div[2]/article/div[1]/div/div[1]/div[1]/a").click()
-            self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/div[2]/article/div[1]/div/div[1]/div[1]/a").click()
+            # self.elemfinder(elemtype="xpath", elem="/html/body/div[1]/section/main/div/div[2]/article/div[1]/div/div[1]/div[1]/a").click()
+            self.driver.find_element_by_xpath(
+                "/html/body/div[1]/section/main/div/div[2]/article/div[1]/div/div[1]/div[1]/a").click()
         except:
             return False
         if like:
@@ -240,7 +255,7 @@ class InstaBot:
         counter = 1
         while (counter < numofposts):
             try:
-                next = self.driver.find_element_by_class_name("_65Bje")
+                next = self.driver.find_element_by_class_name(self.classes["next"])
             except selenium.common.exceptions.NoSuchElementException:
                 break
             next.click()
@@ -252,10 +267,11 @@ class InstaBot:
             counter += 1
         return True
 
-    def ViewRecommendation(self,numofposts,like=True,comment=False):
+    def ViewRecommendation(self, numofposts, like=True, comment=False):
         self.driver.get("https://www.instagram.com/explore/")
         sleep(2)
-        self.elemfinder(elemtype="xpath",elem="/html/body/div[1]/section/main/div/div[1]/div/div[1]/div[2]/div/a").click()
+        self.elemfinder(elemtype="xpath",
+                        elem="/html/body/div[1]/section/main/div/div[1]/div/div[1]/div[2]/div/a").click()
         sleep(2)
         if like:
             self.like()
@@ -265,7 +281,7 @@ class InstaBot:
         counter = 1
         while (counter < numofposts):
             try:
-                next = self.driver.find_element_by_class_name("_65Bje")
+                next = self.driver.find_element_by_class_name(self.classes["next"])
             except selenium.common.exceptions.NoSuchElementException:
                 break
             next.click()
@@ -286,14 +302,12 @@ class InstaBot:
 
     def Follow(self, user):
 
-        if self.VarifyUser(user)==False:
-
+        if self.VarifyUser(user) == False:
             return False
 
-
-        self.driver.get("https://www.instagram.com/"+user+"/")
+        self.driver.get("https://www.instagram.com/" + user + "/")
         sleep(.5)
-        fl=self.elemfinder(elemtype="classname", elem="_6VtSN")
+        fl = self.elemfinder(elemtype="classname", elem=self.classes["follow"])
 
         if "follow" in fl.text.lower():
             fl.click()
@@ -304,7 +318,7 @@ class InstaBot:
             self.Follow(user)
 
     def FollowFollowers(self):
-        self.driver.get("https://www.instagram.com/"+self.user+"/")
+        self.driver.get("https://www.instagram.com/" + self.user + "/")
         sleep(2)
         self.elemfinder(elemtype="xpath", elem="/html/body/div[1]/section/main/div/header/section/ul/li[2]/a").click()
         sleep(2)
@@ -313,10 +327,10 @@ class InstaBot:
 
         num = soup.find("span")["title"]
         num = int(num)
-        lipath="/html/body/div[5]/div/div/div[2]/ul/div/li["
+        lipath = "/html/body/div[5]/div/div/div[2]/ul/div/li["
 
         for i in range(num):
-            box = self.driver.find_element_by_xpath(lipath+str(i+1)+"]")
+            box = self.driver.find_element_by_xpath(lipath + str(i + 1) + "]")
             try:
                 box.find_element_by_class_name("yWX7d").click()
                 sleep(1)
@@ -341,7 +355,7 @@ class InstaBot:
             self.driver.find_element_by_xpath("/html/body/div[5]/div/div/div/div[3]/button[1]").click()
             return True
         except selenium.common.exceptions.NoSuchElementException:
-            #for requested user
+            # for requested user
             try:
                 self.driver.find_element_by_xpath(
                     "/html/body/div[1]/section/main/div/header/section/div[1]/div[1]/div/div/button").click()
@@ -349,7 +363,7 @@ class InstaBot:
                 self.driver.find_element_by_xpath("/html/body/div[6]/div/div/div/div[3]/button[1]").click()
                 return True
             except:
-            # for whom was not followed or requested
+                # for whom was not followed or requested
                 return False
 
     def unfollowfollower(self, followers=[]):
@@ -360,25 +374,30 @@ class InstaBot:
 
     def GetUserData(self, user):
         try:
-            html = urllib.request.urlopen('https://www.instagram.com/'+user).read()
+            html = urllib.request.urlopen('https://www.instagram.com/' + user).read()
             soup = bs(html, 'html.parser')
 
             s = soup.find('script', type='application/ld+json')
             js = json.loads(s.string)
             return js
         except urllib.error.HTTPError as e:
-            return str(e)+" too many requests"
-
-
-
-
-
-
-
+            return str(e) + " too many requests"
 
 # insta = InstaBot()
-# insta.setup(mydriver=webdriver.Edge("C:/Users/user/Downloads/edgedriver_win32/msedgedriver.exe"))
-# insta.login("username", "passward")
+# insta.setup(mydriver=webdriver.Edge("msedgedriver.exe"))
+# insta.login("tsinha890", "tirtha2")
 
 
-
+# insta.LikeCommentByUsername(target="elina_4_22",like=True, comment=True, numofposts=10)
+# insta.LikeCommentByHashtag("html", like=True, comment=True, numofposts=10)
+# insta.LikeCommentOnHome(like=True, comment=True, numofposts=10)
+# insta.LikeCommentSaved(like=True, comment=True, numofposts=10,)
+# insta.ViewRecommendation(numofposts=2, comment=False,like=True)
+# insta.commentpicker(comments=["perfect"], action="append")
+# insta.FollowFollowers()
+# insta.Follow(user="coe_eb")
+# insta.Followlist(targets=["elina_4_22"])
+# insta.unfollowfollower(["tirtharaj_sinha"])
+# insta.unfollowuser(user="coe_eb")
+# a=insta.VarifyUser("elina_4_22")
+# a=insta.GetUserData(user="tirtharaj_sinha")
